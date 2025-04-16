@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playfair+Display:wght@400;700&display=swap');
+
+/* Root variables for consistent theming */
+:root {
+  --primary-color: #3B2F2F; /* Deep coffee brown for elegance */
+  --secondary-color: #8B5E3C; /* Warm terracotta for accents */
+  --background-color: #F9F5F0; /* Creamy off-white for a paper-like feel */
+  --text-color: #2E2E2E; /* Charcoal for readability */
+  --accent-color: #D4A017; /* Golden yellow for highlights */
+}
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Swiper container */
+.swiper {
+  width: 100%;
+  height: 100%;
+  background: var(--background-color);
+}
+
+/* Swiper slide */
+.swiper-slide {
+  background: linear-gradient(145deg, #FFFFFF, #F0ECE3); /* Subtle book-page gradient */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover {
+  transform: translateY(-5px); /* Slight lift on hover for interactivity */
+}
+
+/* Swiper slide images */
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 2px solid var(--secondary-color); /* Frame-like border */
+}
+
+/* Swiper navigation buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  background: var(--primary-color);
+  color: #FFFFFF;
+  padding: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: var(--secondary-color);
+  transform: scale(1.1); /* Subtle scaling on hover */
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 18px !important;
+  font-weight: bold;
+}
+
+/* Hide prev button if not needed */
+.swiper-button-prev {
+  display: none !important;
+}
+
+/* Primary button styling */
+.btn-primary {
+  background: var(--primary-color);
+  color: #FFFFFF;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: var(--accent-color);
+  color: var(--text-color);
+  transform: translateY(-2px); /* Lift effect */
+}
+
+/* General typography */
+body {
+  font-family: 'Nunito Sans', sans-serif;
+  color: var(--text-color);
+  background: var(--background-color);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+}
